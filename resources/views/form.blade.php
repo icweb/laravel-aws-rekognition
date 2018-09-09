@@ -16,7 +16,6 @@
     <div class="jumbotron">
         <h3>Laravel + AWS Rekognition SDK Integration</h3>
         <p>This project demonstrates the integration of the AWS Rekognition SDK into a Laravel project.</p>
-        <a target="_blank" href="https://github.com/icweb/laravel-aws-rekognition" class="btn btn-default"><em class="fa fa-github"></em> View on GitHub</a>
     </div>
 
     @if(session('success'))
