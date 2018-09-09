@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Aws\Rekognition\RekognitionClient;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PhotosController extends Controller
 {
@@ -41,6 +42,8 @@ class PhotosController extends Controller
             {
                 $message = 'This photo does not contain nudity';
             }
+
+            DB::table('upload_logs')->insert(['type' => 'nudity', 'results' => count($results)]);
         }
         else
         {
@@ -66,6 +69,8 @@ class PhotosController extends Controller
             {
                 $message = 'This photo says ' . $string;
             }
+
+            DB::table('upload_logs')->insert(['type' => 'text_read', 'results' => count($results)]);
         }
 
         request()->session()->flash('success', $message);

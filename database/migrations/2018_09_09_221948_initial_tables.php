@@ -14,7 +14,10 @@ class InitialTables extends Migration
     public function up()
     {
         Schema::create('upload_logs', function(Blueprint $table){
-
+            $table->increments('id');
+            $table->string('type');
+            $table->integer('results');
+            $table->timestamps();
         });
     }
 
