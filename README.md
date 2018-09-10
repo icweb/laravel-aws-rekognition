@@ -6,22 +6,11 @@ This project demonstrates the integration of the AWS Rekognition SDK into a Lara
 
 ___
 
-### Project Requirements
-
-* An AWS account
-* PHP 7.1
-
-___
-
 ### Prerequisites
 
-#### __AWS Keys__
+#### __AWS Account & Access Keys__
 
 You will need to get your `AWS Secret Access Key` and `Access Key ID` to use the SDK. [Click here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html?icmpid=docs_iam_console) to visit the Managing Access Keys for IAM Users page and learn how to find these keys.
-
-#### __Laravel Project__
-
-You will need to have a Laravel project already created to run this demonstration. [Click here](https://laravel.com/docs/5.6#installation) to visit the Laravel Documentation page and learn how to create a project.
 
 #### __Knowledge of Rekognition__
 
@@ -71,7 +60,6 @@ Create a new  `RekognitionClient` and fill in your region to begin making reques
 ```
 use Aws\Rekognition\RekognitionClient;
 
- 
 $client = new RekognitionClient([
     'region'    => 'ENTER_YOUR_REGION',
     'version'   => 'latest'
@@ -100,7 +88,7 @@ $results = $client->detectModerationLabels([
     'MinConfidence' => 50
 ])['ModerationLabels'];
  
- # Check to see if nudity labels were returned
+# Check to see if nudity labels were returned
 $containsNudity = array_search('Explicit Nudity', array_column($results, 'Name'));
 ```
 
@@ -113,13 +101,13 @@ $containsNudity = array_search('Explicit Nudity', array_column($results, 'Name')
      'MinConfidence' => 50
  ])['ModerationLabels'];
   
- # Create single string of all words detected
- foreach($results as $item)
- {
-     if($item['Type'] === 'WORD') 
-     {
+# Create single string of all words detected
+foreach($results as $item)
+{
+    if($item['Type'] === 'WORD') 
+    {
         $string .= $item['DetectedText'] . ' ';
-     }
- }
+    }
+}
 
  ```
