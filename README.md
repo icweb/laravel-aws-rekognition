@@ -3,6 +3,7 @@
 This project demonstrates the integration of the AWS Rekognition SDK into a Laravel project, covering two functions of the Rekognition service: detecting text in photos, and detecting nudity. This project is a demonstration and requires you to integrate your own use case.
 
 [View Demo](http://laravel-aws-rekognition-demo.icwebapps.com/)
+
 [Watch Video Tutorial](https://www.youtube.com/channel/UC8_SWNTArdoVfMFpZ4UkYwA)
 
 ___
