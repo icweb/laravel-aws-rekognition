@@ -15,10 +15,6 @@ class PhotosController extends Controller
     public function submitForm(Request $request)
     {
         $client = new RekognitionClient([
-            'credentials' => [
-                'key'    => env('AWS_ACCESS_KEY_ID'),
-                'secret' => env('AWS_SECRET_ACCESS_KEY')
-            ],
             'region'    => 'us-west-2',
             'version'   => 'latest'
         ]);
@@ -28,9 +24,6 @@ class PhotosController extends Controller
 
         if($request->input('type') === 'nudity')
         {
-            // https://docs.aws.amazon.com/rekognition/latest/dg/moderation.html
-            // https://docs.aws.amazon.com/rekognition/latest/dg/API_DetectModerationLabels.html
-
             $results = $client->detectModerationLabels(['Image' => ['Bytes' => $bytes], 'MinConfidence' => intval($request->input('confidence'))])['ModerationLabels'];
 
             if(array_search('Explicit Nudity', array_column($results, 'Name')))
@@ -44,9 +37,6 @@ class PhotosController extends Controller
         }
         else
         {
-            // https://docs.aws.amazon.com/rekognition/latest/dg/text-detection.html
-            // https://docs.aws.amazon.com/rekognition/latest/dg/API_DetectText.html
-
             $results = $client->detectText(['Image' => ['Bytes' => $bytes], 'MinConfidence' => intval($request->input('confidence'))])['TextDetections'];
 
             $string = '';
