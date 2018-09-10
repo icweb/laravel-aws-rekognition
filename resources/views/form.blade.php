@@ -8,6 +8,14 @@
     <title>Laravel + AWS Rekognition</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        .btn-black
+        {
+            border: 1px solid #000000;
+            background-color: #ffffff;
+            color: #000000;
+        }
+    </style>
 </head>
 <body>
 
@@ -16,7 +24,8 @@
     <div class="jumbotron">
         <h3>Laravel + AWS Rekognition SDK Integration</h3>
         <p>This project demonstrates the integration of the AWS Rekognition SDK into a Laravel project.</p>
-        <a target="_blank" href="https://github.com/icweb/laravel-aws-rekognition" class="btn btn-default"><em class="fa fa-github"></em> View on GitHub</a>
+        <a target="_blank" href="https://github.com/icweb/laravel-aws-rekognition" class="btn btn-black"><em class="fa fa-github"></em> View on GitHub</a>
+        <a target="_blank" href="https://www.youtube.com/channel/UC8_SWNTArdoVfMFpZ4UkYwA" class="btn btn-danger btn-outline-danger"><em class="fa fa-youtube-play"></em> Watch on YouTube</a>
     </div>
 
     @if(session('success'))
