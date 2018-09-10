@@ -64,7 +64,6 @@ $client = new RekognitionClient([
     'region'    => 'ENTER_YOUR_REGION',
     'version'   => 'latest'
 ]);
-
 ```
  
 #### __Preparing the Image__
@@ -109,5 +108,4 @@ foreach($results as $item)
         $string .= $item['DetectedText'] . ' ';
     }
 }
-
  ```
