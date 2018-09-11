@@ -25,7 +25,7 @@
         <h3>Laravel + AWS Rekognition SDK Integration</h3>
         <p>This project demonstrates the integration of the AWS Rekognition SDK into a Laravel project.</p>
         <a target="_blank" href="https://github.com/icweb/laravel-aws-rekognition" class="btn btn-black"><em class="fa fa-github"></em> View on GitHub</a>
-        <a target="_blank" href="https://www.youtube.com/channel/UC8_SWNTArdoVfMFpZ4UkYwA" class="btn btn-danger btn-outline-danger"><em class="fa fa-youtube-play"></em> Watch on YouTube</a>
+        {{--<a target="_blank" href="https://www.youtube.com/channel/UC8_SWNTArdoVfMFpZ4UkYwA" class="btn btn-danger btn-outline-danger"><em class="fa fa-youtube-play"></em> Watch on YouTube</a>--}}
     </div>
 
     @if(session('success'))
