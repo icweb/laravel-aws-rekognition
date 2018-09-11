@@ -56,7 +56,7 @@ ___
 
 Create a new  `RekognitionClient` and fill in your region to begin making requests.
 
-```
+```php
 use Aws\Rekognition\RekognitionClient;
 
 $client = new RekognitionClient([
