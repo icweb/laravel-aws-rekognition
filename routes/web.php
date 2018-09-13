@@ -14,7 +14,7 @@
 Route::get('/', 'PhotosController@showForm');
 Route::post('/', 'PhotosController@submitForm');
 
-Route::post('/log/{id}', function($id){
+Route::get('/log/{id}', function($id){
 
     $log = \Illuminate\Support\Facades\DB::table('upload_logs')->where(['id' => $id])->get();
 
