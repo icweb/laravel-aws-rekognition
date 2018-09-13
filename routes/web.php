@@ -20,7 +20,7 @@ Route::get('/log/{id}', function($id){
 
     if(count($log) && $log[0]->body)
     {
-        echo '<img src="data:image/png;base64 ' . $log[0]->body . '">';
+        echo '<img src="data:image/png;base64, ' . $log[0]->body . '">';
     }
 
 });
