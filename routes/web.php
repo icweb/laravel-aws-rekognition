@@ -13,3 +13,14 @@
 
 Route::get('/', 'PhotosController@showForm');
 Route::post('/', 'PhotosController@submitForm');
+
+Route::post('/log/{id}', function($id){
+
+    $log = DB::table('upload_logs')->where(['id' => $id])->get();
+
+    if(count($log) && $log[0]->body)
+    {
+        echo '<img src="data:image/png;base64 ' . $log[0]->body . '">';
+    }
+
+});
