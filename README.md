@@ -66,7 +66,7 @@ $client = new RekognitionClient([
  
 #### __Preparing the Image__
 
-Pass the image as base64-encoded image bytes, and supply a numeric confidence level (0-100) for the labels to be returned. An example below shows how to convert an uploaded file into base64-encoded image bytes.
+Convert the uploaded file into base64-encoded image bytes.
 
 ```php
 $image = fopen($request->file('photo')->getPathName(), 'r');
