@@ -1,6 +1,6 @@
-# Laravel + AWS Rekognition SDK Integration
+# Laravel + AWS Rekognition Integration
 
-This project demonstrates the integration of the AWS Rekognition SDK into a Laravel project, covering two functions of the Rekognition service: detecting text in photos, and detecting nudity. This project is a demonstration and requires you to integrate your own use case.
+This project demonstrates the integration of the AWS SDK for PHP Rekognition client into a Laravel project, covering two functions of the Rekognition service: detecting text in photos, and detecting nudity. This project is a demonstration and requires you to integrate your own use case.
 
 [View Demo](http://laravel-aws-rekognition-demo.icwebapps.com/)
 ___
@@ -11,9 +11,8 @@ ___
 
 You will need to get your `AWS Secret Access Key` and `Access Key ID` to use the SDK. [Click here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html?icmpid=docs_iam_console) to visit the Managing Access Keys for IAM Users page and learn how to find these keys.
 
-#### __Knowledge of Rekognition__
+#### __About Rekognition__
 
-It is important for you to know what the Rekognition offers, how we should present requests, and how we should expect to receive requests. Rekognition offers many features that are not included in the project.
 * [https://docs.aws.amazon.com/rekognition/latest/dg/moderation.html](https://docs.aws.amazon.com/rekognition/latest/dg/moderation.html)
 * [https://docs.aws.amazon.com/rekognition/latest/dg/API_DetectModerationLabels.html](https://docs.aws.amazon.com/rekognition/latest/dg/API_DetectModerationLabels.html)
 
