@@ -63,7 +63,7 @@ $client = new RekognitionClient([
     'version'   => 'latest'
 ]);
 ```
- 
+
 #### __Preparing the Image__
 
 Convert the uploaded file into base64-encoded image bytes.
@@ -81,27 +81,26 @@ __Detect Nudity__
 
 ```php
 $results = $client->detectModerationLabels([
-    'Image'         => ['Bytes' => $bytes], 
+    'Image'         => ['Bytes' => $bytes],
     'MinConfidence' => 50
 ])['ModerationLabels'];
- 
+
 # Check to see if nudity labels were returned
 $containsNudity = array_search('Explicit Nudity', array_column($results, 'Name'));
 ```
 
- 
+
  __Detect Text in Photo__
- 
+
  ```php
  $results = $client->detectText([
-     'Image'         => ['Bytes' => $bytes], 
-     'MinConfidence' => 50
- ])['ModerationLabels'];
-  
+     'Image'         => ['Bytes' => $bytes],
+ ])['TextDetections'];
+
 # Create single string of all words detected
 foreach($results as $item)
 {
-    if($item['Type'] === 'WORD') 
+    if($item['Type'] === 'WORD')
     {
         $string .= $item['DetectedText'] . ' ';
     }
