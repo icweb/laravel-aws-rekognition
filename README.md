@@ -317,7 +317,7 @@ public function submitForm(Request $request)
 
 <a name="RequestExamples">
 
-#### __Request Examples__
+### __Request Examples__
 
 Create a request to Rekognition. Supply the image bytes, and enter a minimum confidence level for your labels.
 
