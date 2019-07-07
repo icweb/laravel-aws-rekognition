@@ -17,6 +17,7 @@ ___
     - [7. Prepare Uploaded Image](#PrepareImage)
     - [8. Add Logic](#AddLogic)
 - [Request Examples](#RequestExamples)
+- [Screenshots](#Screenshots)  
 ___
 
 <a name="Demo">
@@ -350,3 +351,12 @@ foreach($results as $item)
     }
 }
  ```
+ 
+<a name="Screenshots">
+
+###Screenshots
+
+![screely-1562534280991](https://user-images.githubusercontent.com/43120665/60774008-7ef86200-a0db-11e9-972a-12c57090c88d.png)
+
+![screely-1562534542122](https://user-images.githubusercontent.com/43120665/60774028-caab0b80-a0db-11e9-9282-5b0c5f6f183a.png)
+
