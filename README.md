@@ -15,7 +15,7 @@ ___
     - [5. Create View](#CreateView)
     - [6. Create Rekognition Client](#CreateClient)
     - [7. Prepare Uploaded Image](#PrepareImage)
-    - [7. Add Logic](#AddLogic)
+    - [8. Add Logic](#AddLogic)
 - [Request Examples](#RequestExamples)
 ___
 
