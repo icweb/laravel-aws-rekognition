@@ -36,7 +36,7 @@ class PhotosController extends Controller
                 $message = 'This photo does not contain nudity';
             }
 
-            DB::table('upload_logs')->insert(['type' => 'nudity', 'results' => count($results), 'created_at' => date('Y-m-d H:i:s'), 'body' => base64_encode(file_get_contents($request->file('photo')))]);
+            DB::table('upload_logs')->insert(['type' => 'nudity', 'results' => count($results), 'created_at' => date('Y-m-d H:i:s')]);
         }
         else
         {
@@ -60,7 +60,7 @@ class PhotosController extends Controller
                 $message = 'This photo says ' . $string;
             }
 
-            DB::table('upload_logs')->insert(['type' => 'text_read', 'results' => count($results), 'created_at' => date('Y-m-d H:i:s'), 'body' => base64_encode(file_get_contents($request->file('photo')))]);
+            DB::table('upload_logs')->insert(['type' => 'text_read', 'results' => count($results), 'created_at' => date('Y-m-d H:i:s')]);
         }
 
         request()->session()->flash('success', $message);
